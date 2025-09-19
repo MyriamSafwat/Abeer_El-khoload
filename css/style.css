@@ -639,6 +639,65 @@ tr td .item-name{
   }
 }
 
+@media (max-width: 768px) {
+
+  /* تغيير حجم الخط العام */
+  body {
+    font-size: 14px;
+  }
+
+  /* Navbar */
+  .navbar .navbar-brand {
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* تعديل السلة لتصبح عرض كامل */
+  .checkout .row {
+    flex-direction: column;
+  }
+
+  .checkout .col-lg-8,
+  .checkout .col-lg-4 {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  /* الجدول يصبح Scrollable */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  table th, table td {
+    font-size: 0.8rem;
+    white-space: nowrap; /* يمنع الكسر الغير مرغوب فيه */
+  }
+
+  /* الفورم */
+  .card form .form-control {
+    font-size: 0.9rem;
+  }
+
+  .btn-gold {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  /* Badge العربة */
+  #ak-cart-count {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  /* Margin & Padding adjustments */
+  .px-5, .py-3 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
 
 
 
