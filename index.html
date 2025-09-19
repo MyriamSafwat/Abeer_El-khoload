@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عبير الخلود</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+
+<body class="text-light ">
+
+<!-- Intro  -->
+<div id="intro-screen" class="position-fixed top-0 start-0 w-100 h-100 bg-black d-flex flex-column align-items-center justify-content-center">
+  <h1 class="display-4 text-gold fade-in"  > 💐 عبير الخلود 💐 </h1>
+  <br>
+  <h6 class="text-bold mt-3  fade-in  text-white">فخامة • سحر • ندرة</h6>
+<div class="smoke-bg"></div>
+
+<!-- SVG filter for smoke effect -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <filter id="smoke">
+    <feTurbulence baseFrequency="0.01 0.02" numOctaves="3" seed="2">
+      <animate attributeName="baseFrequency" dur="10s"
+               values="0.01 0.02;0.02 0.04;0.01 0.02"
+               repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" scale="50"/>
+  </filter>
+</svg>
+
+</div>
+
+
+<!-- Navigation --><nav class="navbar navbar-expand-lg bg-lin-gold fixed-top shadow">
+  <div class="container">
+    
+    <!-- Logo -->
+    <a class="navbar-brand text-black fw-bold me-auto" href="index.html">عبير الخلود</a>
+
+    <!-- Toggle Button (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0 fw-bold">
+        <li class="nav-item"><a class="nav-link text-black " href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="#products">المنتجات</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="#about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="#advisor-ak">خبير العطور</a></li>
+      </ul>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="d-flex ms-auto cart-icon" >
+      <a class="nav-link text-black position-relative" id="ak-cart-btn "  href="checkout.html">
+        🛒 
+        <span id="btn-cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold text-black">
+          0
+        </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+<!-- Main Section --><!-- Main Section -->
+<section class="main-hero d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- النص -->
+      <div class="col-md-6 text-center text-md-end custom-text">
+        <h1 class="text-gold fw-bold mb-3 fade-in">الآن مع خبير العطور</h1>
+        <p class="text-light lead mb-4 fade-in">استكشف عطرك المثالي</p>
+        <a href="#advisor-ak" class="btn btn-gold btn-lg px-4">خبير العطور</a>
+      </div>
+      
+      <div class="col-md-6 text-center">
+        <!-- صورة -->
+        <img src="img/main.jpg" alt="زجاجة عطر" class="hero-img img-fluid animate-bottle">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="advisor-ak" class="py-5 bg-dark text-light">
+  <div class="container text-center">
+    <h2 class="text-gold mb-4">مستشارك الشخصي للعطور</h2>
+
+    <div id="ak-steps">
+
+      <!-- Step 1 -->
+      <div class="ak-step ak-active" id="ak-step-1" data-step="1">
+        <h4>إيه الإحساس اللي بتدور عليه النهاردة؟</h4>
+        <button class="btn btn-gold ak-answer-btn" data-answer="انتعاش">انتعاش</button>
+        <button class="btn btn-gold ak-answer-btn" data-answer="دفء">دفء</button>
+        <button class="btn btn-gold ak-answer-btn" data-answer="رومانسية">رومانسية</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="ak-step" id="ak-step-2" data-step="2">
+        <h4>تحب الروائح أكتر من نوع إيه؟</h4>
+        <button class="btn btn-gold ak-answer-btn" data-answer="زهور">زهور</button>
+        <button class="btn btn-gold ak-answer-btn" data-answer="فواكه">فواكه</button>
+        <button class="btn btn-gold ak-answer-btn" data-answer="أخشاب">أخشاب</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="ak-step" id="ak-step-3" data-step="3">
+        <h4>مناسب لاستخدام إمتى؟</h4>
+        <button class="btn btn-gold ak-answer-btn" data-answer="نهار">نهار</button>
+        <button class="btn btn-gold ak-answer-btn" data-answer="ليل">ليل</button>
+        <button class="btn btn-gold ak-answer-btn" data-answer="مناسبة خاصة">مناسبة خاصة</button>
+      </div>
+
+        <!-- Result -->
+        <div class="ak-step" id="ak-result">
+          <h3 id="ak-perfume-name" class="text-gold"></h3>
+          <p id="ak-perfume-comment"></p>
+          <div class="ak-rotate-wrap">
+            <img id="ak-perfume-img"  
+                src="img/dark-glass-bottle-ak.jpg" 
+                class="ak-perfume-img ak-rotate-target" 
+                alt="perfume">
+          </div>
+          <p id="ak-perfume-price" class="product-price"></p>
+          <br>
+          <button id="ak-buy-btn" class="btn btn-gold mt-3 ak-buy-btn">شراء الآن</button>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section id="product-slider" class="py-5 bg-black text-center">
+  <div class="container">
+    <h2 class="text-gold mb-4">منتجاتنا المميزة</h2>
+
+    <div id="akCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+
+        <!-- الصورة الأولى -->
+        <div class="carousel-item active">
+          <img src="img/11.jpg" class="d-block mx-auto rounded shadow zoom-animate" style="max-height:400px;" alt="عطر 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-gold">Noir d'Or</h5>
+            <p>لمسة شرقية فاخرة تناسب ذوقك.</p>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="carousel-item">
+          <img src="img/12.webp" class="d-block mx-auto rounded shadow zoom-animate" style="max-height:400px;" alt="عطر 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-gold">Sable Wood</h5>
+            <p>خشبي دافئ يناسب السهرات.</p>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="carousel-item">
+          <img src="img/13.jpg" class="d-block mx-auto rounded shadow zoom-animate" style="max-height:400px;" alt="عطر 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-gold">Aurum Bloom</h5>
+            <p>زهري أنثوي برائحة فريدة.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- مؤشرات أسفل -->
+      <div class="carousel-indicators mt-3">
+        <button type="button" data-bs-target="#akCarousel" data-bs-slide-to="0" class="active bg-gold"></button>
+        <button type="button" data-bs-target="#akCarousel" data-bs-slide-to="1" class="bg-gold"></button>
+        <button type="button" data-bs-target="#akCarousel" data-bs-slide-to="2" class="bg-gold"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="py-5 bg-black text-light">
+  <div class="container">
+    <h2 class="text-center text-gold mb-4">عطورنا الفاخرة</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="products">
+
+
+      <!-- Product 1 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card bg-black text-light p-3 rounded-4 shadow-lg position-relative"
+             data-id="1" 
+             data-name="Noir d'Or" 
+             data-price="600" 
+             data-img="img/1.jfif">
+
+          <button class="btn btn-link text-gold position-absolute top-0 end-0 m-2 fav-btn">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <div class="ak-rotate-wrap text-center">
+            <img class="ak-rotate-target product-img hero-img img-fluid"
+                 src="img/1.jfif" alt="Noir d'Or">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-gold">Noir d'Or</h5>
+            <p class="card-text">لمسة شرقية فاخرة تناسب كل الأوقات.</p>
+            <p class="product-price">600 ج.م</p>
+            <button class="btn btn-gold add-to-cart ak-buy-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card bg-black text-light p-3 rounded-4 shadow-lg position-relative"
+             data-id="2" 
+             data-name="Sable Wood" 
+             data-price="720" 
+             data-img="img/2.jfif">
+
+          <button class="btn btn-link text-gold position-absolute top-0 end-0 m-2 fav-btn">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <div class="ak-rotate-wrap text-center">
+            <img class="ak-rotate-target product-img hero-img img-fluid"
+                 src="img/2.jfif" alt="Sable Wood">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-gold">Sable Wood</h5>
+            <p class="card-text">خشب عطري عميق يمنحك حضوراً قوياً.</p>
+            <p class="product-price">720 ج.م</p>
+            <button class="btn btn-gold add-to-cart ak-buy-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card bg-black text-light p-3 rounded-4 shadow-lg position-relative"
+             data-id="3" 
+             data-name="Aurum Bloom" 
+             data-price="580" 
+             data-img="img/3.jfif">
+
+          <button class="btn btn-link text-gold position-absolute top-0 end-0 m-2 fav-btn">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <div class="ak-rotate-wrap text-center">
+            <img class="ak-rotate-target product-img hero-img img-fluid"
+                 src="img/3.jfif" alt="Aurum Bloom">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-gold">Aurum Bloom</h5>
+            <p class="card-text">عبير زهري ذهبي يعكس الرقي والأنوثة.</p>
+            <p class="product-price">580 ج.م</p>
+            <button class="btn btn-gold add-to-cart ak-buy-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card bg-black text-light p-3 rounded-4 shadow-lg position-relative"
+             data-id="4" 
+             data-name="Velour Rouge" 
+             data-price="690" 
+             data-img="img/4.jfif">
+
+          <button class="btn btn-link text-gold position-absolute top-0 end-0 m-2 fav-btn">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <div class="ak-rotate-wrap text-center">
+            <img class="ak-rotate-target product-img hero-img img-fluid"
+                 src="img/4.jfif" alt="Velour Rouge">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-gold">Velour Rouge</h5>
+            <p class="card-text">عطر  مخملي ينبض بالشغف والجاذبية.</p>
+            <p class="product-price">690 ج.م</p>
+            <button class="btn btn-gold add-to-cart ak-buy-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card bg-black text-light p-3 rounded-4 shadow-lg position-relative"
+             data-id="5" 
+             data-name="Mystic Oud" 
+             data-price="850" 
+             data-img="img/5.jfif">
+
+          <button class="btn btn-link text-gold position-absolute top-0 end-0 m-2 fav-btn">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <div class="ak-rotate-wrap text-center">
+            <img class="ak-rotate-target product-img hero-img img-fluid"
+                 src="img/5.jfif" alt="Mystic Oud">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-gold">Mystic Oud</h5>
+            <p class="card-text">عود غامض يجمع بين الأصالة والفخامة.</p>
+            <p class="product-price">850 ج.م</p>
+            <button class="btn btn-gold add-to-cart ak-buy-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card bg-black text-light p-3 rounded-4 shadow-lg position-relative"
+             data-id="6" 
+             data-name="Royal Amber" 
+             data-price="770" 
+             data-img="img/6.jfif">
+
+          <button class="btn btn-link text-gold position-absolute top-0 end-0 m-2 fav-btn">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <div class="ak-rotate-wrap text-center">
+            <img class="ak-rotate-target product-img hero-img img-fluid"
+                 src="img/6.jfif" alt="Royal Amber">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-gold">Royal Amber</h5>
+            <p class="card-text">العنبر الملكي الدافئ لإطلالة ملكية متألقة.</p>
+            <p class="product-price">770 ج.م</p>
+            <button class="btn btn-gold add-to-cart ak-buy-btn">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- how we are -->
+<section id="about" class="py-5 bg-black text-gold text-center">
+  <div class="container">
+   <h2 class="mb-4 text-light text-bold mt-5">من نحن</h2>
+    <p class="lead mb-3">
+     معًا في  <span class="fw-bold text-gold">عبير الخلود</span>، نصنع عطرك كما لو كان قصيدة 
+      خالدة تُحكى بلمسة فريدة من أجود المكونات.
+    </p>
+    <p class="mb-0">
+      منذ <span class="fw-bold">2005</span> ونحن نمنح عملاءنا الثقة والجودة،  
+      لنقدّم لهم عطرًا يعبّر عن شخصيتهم ويترك أثرًا لا يُنسى.
+    </p>
+  </div>
+</section>
+
+<!-- customer -->
+<section id="testimonials" class="py-5 bg-black text-gold">
+  <div class="container">
+    <h2 class="text-center mb-4">آراء عملائنا</h2>
+
+    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+      <div class="carousel-inner text-center">
+
+        <div class="carousel-item active">
+          <p class="lead">"أفضل تجربة عطور مررت بها، عطر فخم وراقي."</p>
+          <small class="d-block text-gold">- أحمد</small>
+        </div>
+
+        <div class="carousel-item">
+          <p class="lead">"خدمة رائعة وتوصيل سريع، سأكرر الطلب."</p>
+          <small class="d-block text-gold">- سارة</small>
+        </div>
+
+        <div class="carousel-item">
+          <p class="lead">"عطر ثابت ويدوم طويلاً، شكراً عبير الخلود."</p>
+          <small class="d-block text-gold">- خالد</small>
+        </div>
+
+        <div class="carousel-item">
+          <p class="lead">"لمسة فريدة فعلاً، أنصح الجميع بالتجربة."</p>
+          <small class="d-block text-gold">- ليلى</small>
+        </div>
+
+        <div class="carousel-item">
+          <p class="lead">"تعامل راقي وجودة عالية جداً."</p>
+          <small class="d-block text-gold">- يوسف</small>
+        </div>
+
+      </div>
+
+    </div></div></section>
+  
+
+<section id="contact" class="py-5 bg-dark text-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+    <h2 class="mb-4 text-light text-bold mt-5 text-center">  تواصل معنا  </h2>
+<!-- بيانات التواصل -->
+
+   
+    <div class="col-md-6 text-gold">
+
+   
+        <form class="mt-4">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="الاسم">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="رسالتك"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold w-100">إرسال</button>
+        </form>
+
+        <section id="social-media" class="py-5 bg-dark text-center">
+      <div class="container">
+    <div class="d-flex justify-content-center gap-4">
+      <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+</section>
+
+      
+      </div>
+
+         <!-- الخريطة -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="map-container rounded-3 shadow">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d782.346980204507!2d29.903513769555584!3d31.203500209091665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c3f33172b041%3A0xa4bf55c509a49ee5!2s6W33%2B9MG%2C%20Al%20Mesallah%20Sharq%2C%20Al%20Attarin%2C%20Alexandria%20Governorate%205373010!5e0!3m2!1sen!2seg!4v1758132091732!5m2!1sen!2seg"
+           width="600" height="450"
+            style="border:0;" allowfullscreen="" 
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-black text-center text-light py-4 mb-2 border-top border-secondary">
+  <div class="container">
+    <p class="mb-1">    عبير الخلود - تصميمات ميريام صفوت - جميع الحقوق محفوظة © 2025  </p>
+    <p class="small  text-gold">فخامة • سحر • ندرة </p>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script/script.js"></script>
+</body>
+</html>
