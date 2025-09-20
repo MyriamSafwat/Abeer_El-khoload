@@ -318,3 +318,42 @@ fetch("http://localhost/your_project/api.php")
       `;
     });
   });
+
+  function flyToCart(imgEl) {
+  if (!imgEl) return;
+  const cartEl = document.getElementById('ak-cart-btn') || document.querySelector('a[href*="checkout"]');
+  const imgRect = imgEl.getBoundingClientRect();
+  const cartRect = cartEl ? cartEl.getBoundingClientRect() : { left: window.innerWidth - 50, top: 20, width: 30, height: 30 };
+
+  const clone = imgEl.cloneNode(true);
+  clone.style.position = 'absolute';
+  clone.style.left = (imgRect.left + window.pageXOffset) + 'px';
+  clone.style.top = (imgRect.top + window.pageYOffset) + 'px';
+  clone.style.width = imgRect.width + 'px';
+  clone.style.height = imgRect.height + 'px';
+  clone.style.transition = 'transform 0.9s cubic-bezier(.2,.9,.2,1), opacity 0.9s linear';
+  clone.style.zIndex = 99999;
+  document.body.appendChild(clone);
+
+  const imgCenterX = imgRect.left + window.pageXOffset + imgRect.width / 2;
+  const imgCenterY = imgRect.top + window.pageYOffset + imgRect.height / 2;
+  const cartCenterX = cartRect.left + window.pageXOffset + cartRect.width / 2;
+  const cartCenterY = cartRect.top + window.pageYOffset + cartRect.height / 2;
+  const dx = cartCenterX - imgCenterX;
+  const dy = cartCenterY - imgCenterY;
+
+  requestAnimationFrame(() => {
+    clone.style.transform = `translate(${dx}px, ${dy}px) scale(0.2)`;
+    clone.style.opacity = '0.4';
+  });
+
+  setTimeout(() => {
+    clone.remove();
+    if (cartEl) {
+      cartEl.classList.add('ak-cart-bounce');
+      setTimeout(() => cartEl.classList.remove('ak-cart-bounce'), 400);
+    }
+  }, 950);
+}
+
+
