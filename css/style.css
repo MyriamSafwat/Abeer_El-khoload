@@ -560,9 +560,15 @@ select.form-select option {
 
 
   
-
-
-  
+@media (max-width: 767px) {
+  .ak-step, #ak-intro {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 20px 10px;
+  }
+}
   .checkout table,
   .checkout thead,
   .checkout tbody,
@@ -639,66 +645,203 @@ tr td .item-name{
   }
 }
 
-@media (max-width: 768px) {
 
-  /* تغيير حجم الخط العام */
+
+@media (max-width: 767px) {
+  .ak-step, #ak-intro {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 20px 10px;
+  }
+}
+
+/* ✅ للموبايل لحد 767px */
+@media (max-width: 767px) {
+
   body {
-    font-size: 14px;
+    font-size: 1rem; /* خط أصغر للموبايل */
+    overflow-x: hidden;
   }
 
-  /* Navbar */
-  .navbar .navbar-brand {
+  /* navbar كأنه app bar */
+  .navbar {
+    background: #000 !important;
+    border-bottom: 2px solid #d4af37;
+    padding: 10px;
+    position: fixed;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+    color: #d4af37 !important;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+
+  /* الصور تبقى فل عرض الموبايل */
+  .hero-img,
+  #products img,
+  #product-slider img {
+    max-width: 100% !important;
+    height: 200px !important;
+    margin: auto;
+  }
+
+  /* الأزرار تاخد العرض بالكامل */
+  
+  .btn-gold,
+  .ak-answer-btn {
+    display: block;
+    width: 80%;
+    margin:  auto ; 
+    margin-bottom: 10px !important;
+    font-size: 1.1rem;
+  }
+
+  /* الكاردات تبقى فل عرض */
+  #products .col-12,
+  #products .card {
+    max-width: 100% !important;
+    margin: 0 auto 20px;
+  }
+
+  /* الكاروسيل */
+  .carousel-caption {
+    font-size: 0.9rem;
+    bottom: 20px;
+  }
+
+  /* عناوين */
+  h1, h2, h3, h4 {
+    font-size: 1.4rem;
+  }
+  p {
     font-size: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
-  /* تعديل السلة لتصبح عرض كامل */
-  .checkout .row {
-    flex-direction: column;
-  }
-
-  .checkout .col-lg-8,
-  .checkout .col-lg-4 {
-    width: 100%;
-    padding: 0.5rem;
-  }
-
-  /* الجدول يصبح Scrollable */
-  .table-responsive {
-    overflow-x: auto;
-  }
-
-  table th, table td {
-    font-size: 0.8rem;
-    white-space: nowrap; /* يمنع الكسر الغير مرغوب فيه */
-  }
-
-  /* الفورم */
-  .card form .form-control {
+  /* ✅ فورم التواصل */
+  #contact form {
+    padding: 15px;
     font-size: 0.9rem;
   }
 
-  .btn-gold {
-    font-size: 0.9rem;
-    padding: 0.5rem;
+  /* ✅ سوشيال ميديا icons */
+  .social-icon {
+    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
   }
 
-  /* Badge العربة */
-  #ak-cart-count {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
+  /* ✅ نخلي الـ sections full height زي الأبلكيشن */
+  section {
+    padding: 40px 15px;
   }
+}
 
-  /* Margin & Padding adjustments */
-  .px-5, .py-3 {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  margin-top: -100px;
+  overflow: hidden;
+  border-radius: 1rem; /* نفس rounded-3 */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
 }
 
 
 
+@media (max-width: 767px) {
+  .checkout .row {
+    flex-direction: column;
+  }
+  .col-lg-8,
+  .col-lg-4 {
+    width: 100% !important;
+  }
+  .card {
+    padding: 1rem !important;
+  }
+  table th, 
+  table td {
+    font-size: 12px;
+    white-space: nowrap; /* مايكسرش النص */
+  }
+  h4, h5 {
+    font-size: 1.1rem;
+  }
+  .form-control,
+  .form-select {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
 
+/* موبايل */
+@media (max-width: 767px) {
+  
+  /* نخفي الهيدر */
+  table thead {
+    display: none;
+  }
+
+  /* كل صف يبقى كارت */
+  table tbody tr {
+    display: block;
+    background: #000;
+    color: rgba(255, 217, 0, 0.671);
+    border: 1px solid #444;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+  }
+
+  /* كل خلية تبقى سطر */
+  table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  /* أول خلية (المنتج + الصورة) */
+  table tbody tr td:first-child {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  /* نخلي الصورة صغيرة */
+  table tbody tr td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* الزرار ياخد شكل موبايل */
+  table tbody tr td button {
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    width: 80%;
+  }
+
+  /* الإجمالي تحت */
+  .checkout h5 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
