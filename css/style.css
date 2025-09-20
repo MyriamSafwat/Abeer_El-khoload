@@ -188,7 +188,7 @@ body {
 }
 .ak-step img{
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px auto;
   width : 250px;
   height: 250px;
 }
@@ -533,7 +533,7 @@ select.form-select option {
 /* بس للشاشات الكبيرة (لاب/ديسكتوب) */
 @media (min-width: 992px) {
   .custom-text {
-    padding-right: 150px; /* أو margin-right لو تحبي */
+    padding-right: 150px; 
     word-spacing: 5;
   }
   
@@ -545,8 +545,6 @@ select.form-select option {
     flex-direction: row !important;
     align-items: stretch !important;
     justify-content: space-between !important;
-    background: #d4af37;
-    position: absolute;
     padding-top: 10px;
     top: 0px; right: 0;
     width: 100%;
@@ -559,16 +557,7 @@ select.form-select option {
   }
 
 
-  
-@media (max-width: 767px) {
-  .ak-step, #ak-intro {
-    width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 20px 10px;
-  }
-}
+
   .checkout table,
   .checkout thead,
   .checkout tbody,
@@ -647,15 +636,6 @@ tr td .item-name{
 
 
 
-@media (max-width: 767px) {
-  .ak-step, #ak-intro {
-    width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 20px 10px;
-  }
-}
 
 /* ✅ للموبايل لحد 767px */
 @media (max-width: 767px) {
@@ -667,14 +647,11 @@ tr td .item-name{
 
   /* navbar كأنه app bar */
   .navbar {
-    background: #000 !important;
     border-bottom: 2px solid #d4af37;
-    padding: 10px;
     position: fixed;
   }
   .navbar-brand {
     font-size: 1.2rem;
-    color: #d4af37 !important;
   }
   .navbar-toggler {
     border: none;
@@ -689,6 +666,14 @@ tr td .item-name{
     margin: auto;
   }
 
+  .ak-step, #ak-intro {
+    width: 90vw;
+    min-height: 100vh;
+    overflow: hidden !important;
+    margin: auto !important;
+    padding: 20px 0px !important;
+  }
+
   /* الأزرار تاخد العرض بالكامل */
   
   .btn-gold,
@@ -698,6 +683,7 @@ tr td .item-name{
     margin:  auto ; 
     margin-bottom: 10px !important;
     font-size: 1.1rem;
+    overflow: hidden;
   }
 
   /* الكاردات تبقى فل عرض */
@@ -737,6 +723,19 @@ tr td .item-name{
   /* ✅ نخلي الـ sections full height زي الأبلكيشن */
   section {
     padding: 40px 15px;
+  }
+
+
+  .ak-step button{
+    padding: 15px 0px !important;
+    margin: 2px auto !important;
+    width: 70%;
+  }
+  .ak-step img{
+    border-radius: 10px;
+    margin: 20px auto !important;
+    width : 250px;
+    height: 250px;
   }
 }
 
